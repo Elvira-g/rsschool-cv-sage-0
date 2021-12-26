@@ -20,3 +20,44 @@ For a large part of my professional life, I have worked in the HR department. At
 * Git
 * Figma
 
+## Code Examples
+**JavaScript**
+
+```let menuIcon = document.querySelector('.mob-menu-icon');
+let mobMenu = document.querySelector('.mob-menu');
+let mobMenuItem = document.querySelectorAll('.mob-menu-item');
+
+menuIcon.addEventListener('click', () => {
+  if (mobMenu.style.maxHeight){
+    mobMenu.style.maxHeight = null;
+    menuIcon.setAttribute('style', 'background-image: url(img/menu-btn.svg)');
+  } else {
+    mobMenu.style.maxHeight = mobMenu.scrollHeight + 'px';
+    menuIcon.setAttribute('style', 'background-image: url(img/close-btn.svg)');
+  }
+})
+
+for (let item of mobMenuItem) {
+  item.addEventListener('click', () => {
+    mobMenu.style.maxHeight = null;
+    menuIcon.setAttribute('style', 'background-image: url(img/menu-btn.svg)');
+  })
+}```
+**PHP**
+```<?php
+include_once ('models/M_Faq.php');
+
+class C_Faq extends Controller {
+
+    public function action_index () {
+        $faq = new M_Faq();
+        $result = $faq->showFaq();
+
+        $this->title = 'Часто задаваемые вопросы';
+        $this->content = $this->Template('views/v_faq.php', array('faq'=>$result));
+
+    }
+}```
+
+
+
