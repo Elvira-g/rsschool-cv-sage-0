@@ -42,7 +42,8 @@ for (let item of mobMenuItem) {
     mobMenu.style.maxHeight = null;
     menuIcon.setAttribute('style', 'background-image: url(img/menu-btn.svg)');
   })
-}```
+}
+```
 **PHP**
 ```<?php
 include_once ('models/M_Faq.php');
@@ -57,7 +58,19 @@ class C_Faq extends Controller {
         $this->content = $this->Template('views/v_faq.php', array('faq'=>$result));
 
     }
-}```
+}
+```
 
+## Experience
+* [Commercial project](https://sidelki-zabota.ru/)
+* [task for a vacancy](https://github.com/Elvira-g/ABC_Mobile_test)
+
+## Education
+**Higher education**
+[Academic International Institute](http://ami-map.ru) - Management
+
+**Additional education**
+[Geekbrains](https://gb.ru) - Web developer
+[Moscow Institute of Foreign Languages](http://www.mosinyaz.com) - B1 Business Preliminary
 
 
