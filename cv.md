@@ -63,14 +63,17 @@ class C_Faq extends Controller {
 
 ## Experience
 * [Commercial project](https://sidelki-zabota.ru/)
-* [task for a vacancy](https://github.com/Elvira-g/ABC_Mobile_test)
+* [Task for a vacancy](https://github.com/Elvira-g/ABC_Mobile_test)
 
 ## Education
-**Higher education**
+**Higher education**  
 [Academic International Institute](http://ami-map.ru) - Management
 
-**Additional education**
-[Geekbrains](https://gb.ru) - Web developer
+**Additional education**  
+[Geekbrains](https://gb.ru) - Web developer  
 [Moscow Institute of Foreign Languages](http://www.mosinyaz.com) - B1 Business Preliminary
 
+## Languages
+* **Russian** (native)
+* **English** (intermediate)
 
