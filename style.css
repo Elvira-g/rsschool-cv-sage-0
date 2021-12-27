@@ -1,0 +1,24 @@
+.container {
+    width: 900px;
+    margin: 0 auto;
+}
+
+h1 {
+    font: bold 42px Arial, sans-serif;
+    color: #0b143d;
+}
+
+h2 {
+    margin: 0;
+    margin-bottom: 20px;
+    margin-top: 35px;
+    font: bold 36px Arial, sans-serif;
+    color: #0b143d;
+}
+
+ul {
+    list-style-type: none;
+    font: 18px Arial, sans-serif;
+    color: #0b143d;
+    padding: 0;
+}
