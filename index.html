@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,17 +7,187 @@
     <title>Elvira Galiakhmedova</title>
 </head>
 <body>
-    <div class="container">
-        <h1>Elvira Galiakhmedova</h1>
-        <hr>
-        <h2>Contacts</h2>
-        <ul>
-            <li><b>Address:</b> Kolomna, Moscow Area, Russia</li>
-            <li><b>Phone:</b> +79261330021</li>
-            <li><b>E-mail:</b> elvira_27@mail.ru</li>
-            <li><b>GitHub</b> Elvira-g</li>
-        </ul>
+
+        <header>
+            <div class="container">
+                <div class="header-info">
+                    <img src="images/photo.jpg" alt="cv-rsschool" class="header-info-img" width="220" height="220">
+                    <div class="header-text-block">
+                        <h1 class="header-info-h1">Elvira Galiakhmedova</h1>
+                        <div class="main-content">
+                            <ul class="main-list">
+                                <li class="main-list-item"><b>Address: </b>Kolomna, Moscow Area, Russia</li>
+                                <li class="main-list-item"><b>Phone: </b>+7 926 1330021</li>
+                                <li class="main-list-item"><b>E-mail: </b>elvira_27@mail.ru</li>
+                                <li class="main-list-item"><b>GitHub: </b><a href="">Elvira-g</a></li>
+                                <li class="main-list-item"><b>Telegram: </b><a href="">ellevira</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <nav class="header-nav">
+                    <ul class="header-menu-list">
+                        <li class="header-menu-item">
+                            <a href="#about" class="header-menu-link active">About</a>
+                        </li>
+                        <li class="header-menu-item">
+                            <a href="#skills" class="header-menu-link">Skills</a>
+                        </li>
+                        <li class="header-menu-item">
+                            <a href="#code" class="header-menu-link">Code Examples</a>
+                        </li>
+                        <li class="header-menu-item">
+                            <a href="#experience" class="header-menu-link">Experience</a>
+                        </li>
+                        <li class="header-menu-item">
+                            <a href="#education" class="header-menu-link">Education</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            
+        </header>
+   <div class="container">   
+        <main>
+            <!-- <section>
+                <h2 class="main-title">Contacts</h2>
+                <div class="main-content">
+                    <ul class="main-list">
+                        <li class="main-list-item"><b>Address: </b>Kolomna, Moscow Area, Russia</li>
+                        <li class="main-list-item"><b>Phone: </b>+7 926 1330021</li>
+                        <li class="main-list-item"><b>E-mail: </b>elvira_27@mail.ru</li>
+                        <li class="main-list-item"><b>GitHub: </b><a href="">Elvira-g</a></li>
+                        <li class="main-list-item"><b>Telegram: </b><a href="">ellevira</a></li>
+                    </ul>
+                </div>
+            </section> -->
+            <section id="about">
+                <h2 class="main-title">About</h2>
+                <div class="main-content">
+                    <p class="main-text">For a large part of my professional life, I have worked in the HR department. At the age of 30, I realized that this is not the direction I want to develop in. So I decided to change my profession. The direction of IT was always interesting for me, but there was no opportunity to get a second higher education. So when various courses for changing specialization appeared, I decided to try myself. Now my main goal is to gain knowledge and start my career in the area that is really interesting to me.</p>
+                </div>
+            </section>
+            <section id="skills">
+                <h2 class="main-title">Skills</h2>
+                <div class="main-content">
+                    <ul class="main-list">
+                        <li class="main-list-item">HTML5/CSS3</li>
+                        <li class="main-list-item">jQuery</li>
+                        <li class="main-list-item">JavaScript (Fundamentals)</li>
+                        <li class="main-list-item">React (in process, Skillbox courses)</li>
+                        <li class="main-list-item">PHP, Laravel (Fundamentals)</li>
+                        <li class="main-list-item">Git</li>
+                        <li class="main-list-item">Figma</li>
+                    </ul>
+                </div>
+            </section>
+            <section id="code">
+                <h2 class="main-title">Code Examples</h2>
+                <div class="main-content">
+                    <h3 class="main-subtitle">JavaScript</h3>
+                    <pre><code>
+let menuIcon = document.querySelector('.mob-menu-icon');
+let mobMenu = document.querySelector('.mob-menu');
+let mobMenuItem = document.querySelectorAll('.mob-menu-item');
+                        
+menuIcon.addEventListener('click', () => {
+    if (mobMenu.style.maxHeight){
+        mobMenu.style.maxHeight = null;
+        menuIcon.setAttribute('style', 'background-image: url(img/menu-btn.svg)');
+    } else {
+        mobMenu.style.maxHeight = mobMenu.scrollHeight + 'px';
+        menuIcon.setAttribute('style', 'background-image: url(img/close-btn.svg)');
+    }
+})
+                        
+for (let item of mobMenuItem) {
+    item.addEventListener('click', () => {
+        mobMenu.style.maxHeight = null;
+        menuIcon.setAttribute('style', 'background-image: url(img/menu-btn.svg)');
+    })
+}
+                    </code></pre>
+                    <h3 class="main-subtitle">PHP</h3>
+                    <pre><code>
+include_once ('models/M_Faq.php');
+
+class C_Faq extends Controller {
+
+    public function action_index () {
+        $faq = new M_Faq();
+        $result = $faq->showFaq();
+
+        $this->title = 'Часто задаваемые вопросы';
+        $this->content = $this->Template('views/v_faq.php', array('faq'=>$result));
+
+    }
+}
+                    </code></pre>
+                </div>
+            </section>
+            <section id="experience">
+                <h2 class="main-title">Experience</h2>
+                <div class="main-content">
+                    <div class="work-block">
+                        <div class="work-item">
+                            <a href="https://sidelki-zabota.ru/" class="work-item-link">
+                                <img src="images/work1.png" alt="" class="work-item-img" width="240" height="180">
+                                <p class="work-item-title">Commercial project</p>
+                                <p class="work-item-text">HTML, CSS, JavaScript, PHP, Hosting</p>
+                            </a>
+                        </div>
+                        <div class="work-item">
+                            <a href="https://github.com/Elvira-g/ABC_Mobile_test" class="work-item-link">
+                                <img src="images/work2.png" alt="" class="work-item-img" width="240" height="180">
+                                <p class="work-item-title">Task for a vacancy</p>
+                                <p class="work-item-text">HTML, CSS, JavaScript</p>
+                            </a>
+                        </div>
+                        <div class="work-item">
+                            <a href="http://mpu24-7.de" class="work-item-link">
+                                <img src="images/work3.png" alt="" class="work-item-img" width="240" height="180">
+                                <p class="work-item-title">Commercial project</p>
+                                <p class="work-item-text">HTML, CSS, JavaScript</p>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- <ul class="main-list">
+                        <li class="main-list-item"><a href="https://sidelki-zabota.ru/" class="main-list-link">Commercial project</a> - HTML, CSS, JavaScript, PHP, Hosting</li>
+                        <li class="main-list-item"><a href="https://github.com/Elvira-g/ABC_Mobile_test" class="main-list-link">Task for a vacancy</a> - HTML, CSS, JavaScript</li>
+                        <li class="main-list-item"><a href="http://mpu24-7.de" class="main-list-link">Layot for a commercial project</a> - HTML, CSS, JavaScript</li>
+                    </ul>  -->
+                </div>              
+            </section>
+            <section id="education">
+                <h2 class="main-title">Education</h2>
+                <div class="main-content">
+                    <div class="main-block">
+                        <h3 class="main-subtitle">Higher education</h3>
+                        <p class="main-text"><b>Academic International Institute</b> - Management</p>
+                    </div>
+                    <div class="main-block">
+                        <h3 class="main-subtitle">Additional education</h3>
+                        <p class="main-text"><b>Geekbrains</b> - Web developer course</p>
+                        <p class="main-text"><b>Skillbox</b> - React course (in process)</p>
+                        <p class="main-text"><b>Moscow Institute of Foreign Languages</b> - B1 Business Preliminary</p>
+                    </div>
+                    <div class="main-block">
+                        <h3 class="main-subtitle">Languages</h3>
+                        <p class="main-text"><b>Russian</b> - Native</p>
+                        <p class="main-text"><b>English</b> - Pre-Intermediate</p>
+                    </div>
+                </div>
+
+            </section>
+        </main>
+        <footer>
+            <div class="footer-info">
+                <a href="https://rs.school/js/" class="footer-logo-link"><img src="images/logo.png" alt="" class="footer-logo" width="100" height="48"></a>
+                <p class="footer-info-text"><a href="https://github.com/Elvira-g" class="footer-info-link">Find me on GitHub</a></p>
+                <p class="footer-info-text">© 2021</p>
+            </div>
+        </footer>
     </div>
-    
+    <script src="scripts/script.js"></script>
 </body>
 </html>
